@@ -222,7 +222,7 @@ export default function Home() {
               </div>
               <div>
                 <span className="text-3xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
-                  PhotoByGuzi
+                  PhotobyGuzi
                 </span>
                 <div className="text-xs text-gray-500 font-medium">Studio Photo Professionnel</div>
               </div>
@@ -276,7 +276,7 @@ export default function Home() {
               </div>
               <div className="flex items-center">
                 <Trophy className="w-4 h-4 mr-1" />
-                <span>🏆 89% choisissent l'à la carte</span>
+                <span>🏆 89% choisissent à la carte</span>
               </div>
             </div>
           </div>
@@ -434,7 +434,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Ils ont choisi l'à la carte
+              Ils ont choisi à la carte
             </h2>
             <p className="text-xl text-gray-600">Témoignages de nos clientes ravies</p>
           </div>
@@ -614,7 +614,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Pourquoi choisir l'à la carte ?
+              Pourquoi choisir à la carte ?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Une approche révolutionnaire qui met le contrôle entre vos mains
@@ -809,7 +809,7 @@ export default function Home() {
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
                 <Camera className="w-10 h-10 text-pink-500" />
-                <span className="text-3xl font-bold">PhotoByGuzi</span>
+                <span className="text-3xl font-bold">PhotobyGuzi</span>
               </div>
               <p className="text-gray-400 text-lg leading-relaxed mb-6">
                 Studio photo professionnel spécialisé dans la maternité, les nouveau-nés et les familles. 
@@ -846,11 +846,11 @@ export default function Home() {
                 </li>
                 <li className="flex items-center">
                   <Phone className="w-4 h-4 mr-2" />
-                  +33 6 XX XX XX XX
+                  +33 6 49 78 55 02
                 </li>
                 <li className="flex items-center">
                   <Camera className="w-4 h-4 mr-2" />
-                  Studio Paris 11ème
+                  Studio sur Montreuil
                 </li>
               </ul>
               <button 
@@ -863,7 +863,7 @@ export default function Home() {
           </div>
           <div className="border-t border-gray-800 pt-8 text-center">
             <p className="text-gray-400">
-              &copy; 2024 PhotoByGuzi. Tous droits réservés. 
+              &copy; 2024 PhotobyGuzi. Tous droits réservés. 
               <span className="text-pink-500 ml-2">Créé avec passion ❤️</span>
             </p>
             <div className="mt-4 text-sm text-gray-500">
