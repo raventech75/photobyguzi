@@ -8,7 +8,11 @@ export const metadata = {
   description: 'Créez votre séance photo sur mesure avec notre configurateur intelligent',
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="fr">
       <body className={inter.className}>{children}</body>
