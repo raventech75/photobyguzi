@@ -21,3 +21,4 @@ public/videos/hero.mp4
 public/images/hero-poster.jpg
 ```
 # photobyguzi
+# photobyguzi
