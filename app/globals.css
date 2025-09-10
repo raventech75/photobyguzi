@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: theme(colors.paper);
+  --ink: theme(colors.ink);
+  --rose: theme(colors.rose);
+  --roseDeep: theme(colors.roseDeep);
+  --gold: theme(colors.gold);
+  --mint: theme(colors.mint);
+  --mintDeep: theme(colors.mintDeep);
+}
+
+html, body { background: var(--paper); color: var(--ink); }
+
+:root{
+  /* Pastels */
+  --rose-50: #fff7f9;
+  --rose-200:#F7DDE1;
+  --rose-300:#F2B8C1;
+  --mint-200:#CDEAD9;
+  --mint-300:#9FD8BE;
+  --gold-200:#F3DFB0;
+  --gold-300:#E9C46A;
+
+  --paper:#FFFCFA;
+  --ink:#1A1A1A;
+
+  /* Glass */
+  --glass-bg: rgba(255,255,255,.66);
+  --glass-brd: rgba(0,0,0,.06);
+}
+
+/* Bords dégradés “or” doux */
+.gradient-border {
+  position: relative;
+}
+.gradient-border::before{
+  content:"";
+  position:absolute; inset:-1px; border-radius: inherit;
+  background: linear-gradient(135deg, rgba(233,196,106,.85), rgba(247,221,225,.85), rgba(205,234,217,.85));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  padding:1px; pointer-events:none;
+}
+
+/* Subtle card shadow */
+.soft-shadow{ box-shadow: 0 8px 30px rgba(0,0,0,.06); }
