@@ -47,3 +47,127 @@ html, body { background: var(--paper); color: var(--ink); }
 
 /* Subtle card shadow */
 .soft-shadow{ box-shadow: 0 8px 30px rgba(0,0,0,.06); }
+
+:root{
+  --bg:#FFFCFA;         /* fond crème */
+  --card:rgba(255,255,255,.70);
+  --ink:#1A1A1A;        /* texte */
+  --muted:#0000001a;    /* bordures douces */
+  --chip:#ffffffd9;
+}
+
+.dark{
+  --bg:#F5F5F6;         /* gris perle */
+  --card:rgba(255,255,255,.62);
+  --ink:#141414;
+  --muted:#00000022;
+  --chip:#ffffffcc;
+}
+
+html,body{ background:var(--bg); }
+
+/* Liseré/ombre pour un titre ultra lisible sur vidéo */
+.hero-w-stroke {
+  color: #fff;
+  text-shadow:
+    0 2px 22px rgba(0,0,0,.35),
+    0 1px 1px rgba(0,0,0,.25);
+}
+/* Accent aurora subtil sur la 1re ligne */
+.hero-w-gradient{
+  background:
+    radial-gradient(1200px 500px at 10% 0%, rgba(247,221,225,.90), transparent 60%),
+    radial-gradient(1200px 500px at 90% 0%, rgba(205,234,217,.80), transparent 60%),
+    linear-gradient(90deg, rgba(255,255,255,0.98), rgba(255,255,255,0.98));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: heroShimmer 6s ease-in-out infinite;
+}
+@keyframes heroShimmer{
+  0%{ filter: drop-shadow(0 6px 22px rgba(0,0,0,.45)); opacity:.98; }
+  50%{ filter: drop-shadow(0 8px 26px rgba(0,0,0,.50)); opacity:1; }
+  100%{ filter: drop-shadow(0 6px 22px rgba(0,0,0,.45)); opacity:.98; }
+}
+
+/* —— décor animé derrière le configurateur —— */
+@keyframes floatX { 0%{transform:translateX(0)} 50%{transform:translateX(18px)} 100%{transform:translateX(0)} }
+@keyframes floatY { 0%{transform:translateY(0)} 50%{transform:translateY(-14px)} 100%{transform:translateY(0)} }
+
+.pg-blobs{
+  position:absolute; inset:0; pointer-events:none; z-index:0;
+  filter: blur(28px) saturate(1.05);
+}
+.pg-blob{ position:absolute; border-radius:999px; opacity:.75; mix-blend:screen; }
+.pg-blob--rose{ background: radial-gradient(40% 60% at 30% 30%, #F7DDE1, transparent 60%); }
+.pg-blob--mint{ background: radial-gradient(40% 60% at 60% 40%, #CDEAD9, transparent 60%); }
+.pg-blob--gold{ background: radial-gradient(40% 60% at 50% 50%, #E9C46A, transparent 60%); }
+.pg-blob.a { width:520px; height:520px; left:-80px; top:-60px; animation: floatX 8s ease-in-out infinite; }
+.pg-blob.b { width:420px; height:420px; right:-60px; top:-80px; animation: floatY 9s ease-in-out infinite; }
+.pg-blob.c { width:380px; height:380px; left:40%; bottom:-140px; animation: floatX 11s ease-in-out infinite; }
+
+/* —— pattern ultra léger sur les cartes —— */
+.pg-pattern{
+  background-image: radial-gradient(#0000000d 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+/* —— carte avec bordure dégradée animée —— */
+.pg-glow{
+  position:relative; border-radius:20px; padding:1px; /* pour la bordure */
+  background: conic-gradient(
+    from 180deg,
+    #ffffff 0%,
+    rgba(255,255,255,.6) 30%,
+    rgba(247,221,225,.8) 40%,
+    rgba(205,234,217,.85) 60%,
+    rgba(233,196,106,.85) 80%,
+    #ffffff 100%
+  );
+  animation: pg-border 8s linear infinite;
+  box-shadow: 0 12px 40px rgba(0,0,0,.10);
+}
+.pg-glow > .inner{
+  border-radius:19px;
+  background: rgba(255,255,255,.78);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0,0,0,.06);
+}
+@keyframes pg-border{ 
+  0%{ filter:hue-rotate(0deg) } 
+  100%{ filter:hue-rotate(360deg) } 
+}
+
+/* variations tonales (léger rim color en haut) */
+.pg-toner-rose   { box-shadow: 0 14px 40px rgba(242,184,193,.25) }
+.pg-toner-mint   { box-shadow: 0 14px 40px rgba(159,216,190,.22) }
+.pg-toner-gold   { box-shadow: 0 14px 40px rgba(233,196,106,.22) }
+
+/* — titrage section — */
+.pg-section-title{
+  display:flex; align-items:center; gap:.55rem; font-weight:700;
+}
+.pg-underline{
+  height:3px; width:100%; border-radius:999px;
+  background: linear-gradient(90deg,#F7DDE1,#CDEAD9,#E9C46A);
+  opacity:.9;
+}
+@keyframes floatX { 0%{transform:translateX(0)} 50%{transform:translateX(18px)} 100%{transform:translateX(0)} }
+@keyframes floatY { 0%{transform:translateY(0)} 50%{transform:translateY(-14px)} 100%{transform:translateY(0)} }
+.pg-blobs{ position:absolute; inset:0; pointer-events:none; z-index:0; filter: blur(28px) saturate(1.05); }
+.pg-blob{ position:absolute; border-radius:999px; opacity:.75; mix-blend:screen; }
+.pg-blob--rose{ background: radial-gradient(40% 60% at 30% 30%, #F7DDE1, transparent 60%); }
+.pg-blob--mint{ background: radial-gradient(40% 60% at 60% 40%, #CDEAD9, transparent 60%); }
+.pg-blob--gold{ background: radial-gradient(40% 60% at 50% 50%, #E9C46A, transparent 60%); }
+.pg-blob.a { width:520px; height:520px; left:-80px; top:-60px; animation: floatX 8s ease-in-out infinite; }
+.pg-blob.b { width:420px; height:420px; right:-60px; top:-80px; animation: floatY 9s ease-in-out infinite; }
+.pg-blob.c { width:380px; height:380px; left:40%; bottom:-140px; animation: floatX 11s ease-in-out infinite; }
+.pg-pattern{ background-image: radial-gradient(#0000000d 1px, transparent 1px); background-size: 12px 12px; }
+.pg-glow{ position:relative; border-radius:20px; padding:1px; background: conic-gradient(from 180deg,#fff 0%,rgba(255,255,255,.6) 30%,rgba(247,221,225,.8) 40%,rgba(205,234,217,.85) 60%,rgba(233,196,106,.85) 80%,#fff 100%); animation: pg-border 8s linear infinite; box-shadow: 0 12px 40px rgba(0,0,0,.10); }
+.pg-glow > .inner{ border-radius:19px; background: rgba(255,255,255,.78); backdrop-filter: blur(8px); border: 1px solid rgba(0,0,0,.06); }
+@keyframes pg-border{ 0%{ filter:hue-rotate(0deg) } 100%{ filter:hue-rotate(360deg) } }
+.pg-toner-rose { box-shadow: 0 14px 40px rgba(242,184,193,.25) }
+.pg-toner-mint { box-shadow: 0 14px 40px rgba(159,216,190,.22) }
+.pg-toner-gold { box-shadow: 0 14px 40px rgba(233,196,106,.22) }
+.pg-section-title{ display:flex; align-items:center; gap:.55rem; font-weight:700; }
+.pg-underline{ height:3px; width:100%; border-radius:999px; background: linear-gradient(90deg,#F7DDE1,#CDEAD9,#E9C46A); opacity:.9; }
